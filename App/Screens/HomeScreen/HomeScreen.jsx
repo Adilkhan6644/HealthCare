@@ -4,7 +4,7 @@ import React from 'react'
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text>YES YES YES</Text>
+      <Text>OH YEAHHHHHHHHHHHHH</Text>
     </View>
   )
 }
