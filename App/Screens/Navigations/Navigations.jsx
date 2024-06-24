@@ -1,11 +1,12 @@
-import { BottomTabBar, createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../HomeScreen/HomeScreen";
 import Medi from "../Medicines/Medi";
 import Siri from "../Search/Siri";
 import Menu from "../Menu/Menu";
 import Cart from '../Cartt/Cart';
-import { Entypo, Ionicons } from '@expo/vector-icons'; // Import Ionicons along with Entypo
+import { Entypo } from '@expo/vector-icons';
 import React from 'react';
+import { AntDesign } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
@@ -26,7 +27,7 @@ export default function App() {
         component={Medi} 
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="medkit" size={size} color={color} />
+            <AntDesign name="medicinebox" size={24} color="black" />
           ),
         }} 
       />
