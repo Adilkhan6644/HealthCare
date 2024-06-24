@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 export default function Medi() {
   return (
     <View style={styles.container}>
-      <Text>Medi</Text>
+      <Image style={{height:"100%", width:"100%", objectFit:"fill=", }} source={require("../../../assets/Images/kala-habshi.png")} />
+      <Text style={{position:"absolute", fontSize:50, width:200, fontWeight:"900", marginBottom:200}}>Coming Soon!!!</Text>
     </View>
   )
 }
@@ -12,7 +13,7 @@ export default function Medi() {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#F2D9FB',
       alignItems: 'center',
       justifyContent: 'center',
     },
