@@ -3,18 +3,17 @@ import {
   Text,
   View,
   TextInput,
-  Pressable,
-  Touchable,
   Image,
   TouchableOpacity,
 } from "react-native";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import { FontAwesome } from "@expo/vector-icons";
-import Slider from "./Slider";
 import { EvilIcons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 export default function HomeScreen() {
+  const navigation = useNavigation();
   return (
     <View>
       <View style={styles.box}>
@@ -33,7 +32,12 @@ export default function HomeScreen() {
           />
         </View>
       </View>
-      <View style={styles.green}>
+      <View
+        style={styles.green}
+        onTouchEnd={() => {
+          navigation.navigate("Order");
+        }}
+      >
         <Text style={{ fontWeight: "700", fontSize: 30, marginLeft: 5 }}>
           Order Medicine:
         </Text>
@@ -54,7 +58,11 @@ export default function HomeScreen() {
         </TouchableOpacity>
       </View>
       <View style={styles.doctor}>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Categories");
+          }}
+        >
           <View style={styles.left}>
             <Text style={styles.heading1}>Find Doctor</Text>
             <Text style={{ width: 100, marginLeft: 90 }}>
@@ -62,7 +70,7 @@ export default function HomeScreen() {
             </Text>
             <Image
               style={{ height: 400, width: 200, marginTop: 0, marginLeft: 70 }}
-              source={require("../../../assets/Images/doctor-anti2.png")}
+              source={require("./doctor-anti2.png")}
             />
             <Text>
               <AntDesign
@@ -94,25 +102,22 @@ export default function HomeScreen() {
           marginTop: 20,
           zIndex: -1,
         }}
+        onTouchEnd={() => {
+          navigation.navigate("Diet");
+        }}
       >
         <Text style={{ textAlign: "center", marginTop: 20 }}>Diet Plan</Text>
         <Text style={{ textAlign: "center", marginLeft: 110 }}>
           Find perfect for your body
         </Text>
         <TouchableOpacity>
-          <Text style={{marginLeft:320}}>
+          <Text style={{ marginLeft: 320 }}>
             <AntDesign name="arrowright" size={30} color="black" />
           </Text>
         </TouchableOpacity>
       </View>
     </View>
   );
-}
-{
-  /*Slider*/
-  <view>
-    <Slider />
-  </view>;
 }
 
 const styles = StyleSheet.create({
@@ -126,7 +131,7 @@ const styles = StyleSheet.create({
     height: 200,
     width: "100%",
     backgroundColor: "#F2D9FB",
-    borderRadius:30
+    borderRadius: 30,
   },
   innerBox: {
     flex: 1,
@@ -165,7 +170,7 @@ const styles = StyleSheet.create({
     width: "100%",
     backgroundColor: "#7DF882",
     marginTop: 20,
-    borderRadius:30
+    borderRadius: 30,
   },
   doctor: {
     display: "flex",

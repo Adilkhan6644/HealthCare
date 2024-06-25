@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export default function GeneralPhysician() {
+export default function CommingSoon() {
   return (
     <View>
-      <Text>GeneralPhysician</Text>
+      <Text>Comming soon</Text>
     </View>
   )
 }

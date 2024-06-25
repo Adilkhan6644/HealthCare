@@ -1,9 +1,9 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import HomeScreen from "../HomeScreen/HomeScreen";
-import Medi from "../Medicines/Medi";
-import Siri from "../Search/Siri";
-import Menu from "../Menu/Menu";
-import Cart from '../Cartt/Cart';
+import HomeScreen from "../Screens/HomeScreen";
+import Medi from "../Screens/Medi";
+import Siri from "../Screens/Siri";
+import Menu from "./Menu";
+import Cart from '../Screens/Cart';
 import { Entypo } from '@expo/vector-icons';
 import React from 'react';
 import { AntDesign } from '@expo/vector-icons';
